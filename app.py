@@ -11,7 +11,7 @@ import config
 
 
 # Initializing Bot
-print('Bot started')
+print('Bot started, if it fails, make sure you havent reached your upload limit')
 options = Options()
 options.add_argument("start-maximized")
 options.add_argument("disable-infobars")
