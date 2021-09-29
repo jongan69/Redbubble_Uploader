@@ -11,6 +11,6 @@ First edit the config.py file with your:
 
 
 
-The bot will run up to 60 times before failure (Redbubble caps out number of uplaods per day)
+The bot will run up to 60 times before failure (Redbubble caps out number of uplaods per day at 60)
 
 
