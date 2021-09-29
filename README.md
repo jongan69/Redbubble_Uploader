@@ -1,5 +1,5 @@
 # Redbubble_Uploader
-A Selenium ChromeDriver Script for automatically uploading art and memes alike to Redbubble stickers as merch
+A Selenium ChromeDriver Script for automatically uploading art and memes alike to Redbubble stickers as merch that also passes captcha
 
 # How to use
 
