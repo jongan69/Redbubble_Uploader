@@ -31,6 +31,7 @@ drvr.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
 drvr.get('https://www.redbubble.com/portfolio/images/new')
 
 
+
 # Login Process
 emailField = drvr.find_element_by_xpath('/html/body/div[1]/div[5]/div[2]/div[2]/div/form/div[1]/div/div/input')
 emailField.send_keys(config.email)
@@ -43,12 +44,11 @@ time.sleep(2)
 button.click()
 
 
-# Check for capatcha
-print('Checking for capatcha...')
 
+# Capatcha Beater
+print('Checking for capatcha...')
 for i in range(1, 11):
         print('.')
-
 try:
     seq = drvr.find_elements_by_tag_name('iframe')
     wait = WebDriverWait(drvr, 10).until(expected_conditions.element_to_be_clickable(
@@ -60,12 +60,10 @@ try:
     expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, "button#recaptcha-audio-button"))).click()
     WebDriverWait(drvr, 10).until(
     expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".rc-audiochallenge-play-button button")))
-    
     # get the mp3 audio file
     src = drvr.find_element_by_id("audio-source").get_attribute("src")
     print(src)
     urllib.request.urlretrieve(src, "src.mp3")
-
     # transcribe the mp3 file
     from transcribe import trans
     input = drvr.find_element_by_xpath('/html/body/div/div/div[6]/input')
@@ -80,15 +78,17 @@ finally:
     print("Ladies and gentleman, we're in")
 
 
+
 # Loop for uploading
 x = 0
 for filename in os.scandir(config.directory):
     fileName,fileExtension = os.path.splitext(filename)
-    print ('file type is ' + fileExtension) 
-   
+    print ('meme file type is ' + fileExtension) 
+    print ('meme file name is ' + fileName) 
+
    # Upload Image Proccess
-    if (fileExtension == '.jpg'|'.JPG'|'.jpeg'|'.JPEG'|'.PNG'|'.png') & x <= 60 :
-        time.sleep(1)
+    if fileExtension.endswith("png") | fileExtension.endswith("jpg") | fileExtension.endswith("jpeg"):
+        time.sleep(1.5)
         print('Uplaoding meme: ' + filename.path)
         uploadButton = drvr.find_element_by_xpath('/html/body/div[1]/div[5]/div[2]/form/div/div[1]/div[1]/input')
         uploadButton.send_keys(filename.path)
@@ -115,16 +115,11 @@ for filename in os.scandir(config.directory):
         memesButton.click()
         matureButton.click()
         rightsButton.click()
-        time.sleep(2)
+        time.sleep(2.5)
         saveWorkButton.click()
-        time.sleep(10)
+        time.sleep(11)
         os.remove(filename.path)
         restartButton = drvr.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[2]/div/div/div/div[1]/div/div/div[2]/div/a/span')
         restartButton.click()
     else:
         print('no memes left or limit reached')
-
-
-
-
-
