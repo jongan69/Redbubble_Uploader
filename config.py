@@ -2,5 +2,5 @@
 email = ""
 password = ""
 # Right click on Chrome driver -> Copy Path, paste below
-chromeDriverPath = 'Code/Redbubble_Automation/chromedriver'
-directory = 'Code/Redbubble_Automation/memes_folder'
+chromeDriverPath = '/Users/jonathan/Desktop/Folders/Code/Redbubble_Automation/chromedriver'
+directory = '/Users/jonathan/Desktop/Folders/Code/Redbubble_Automation/memes_folder'
