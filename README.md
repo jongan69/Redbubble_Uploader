@@ -1,5 +1,8 @@
 # Redbubble_Uploader
+
 A Selenium ChromeDriver Script for automatically uploading art and memes alike to Redbubble stickers as merch that also passes captcha
+
+<a href="https://www.buymeacoffee.com/jonngan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 # How to use
 
