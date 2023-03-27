@@ -30,5 +30,5 @@ toml==0.10.2
 tqdm==4.62.3
 urllib3<1.26
 webdrivermanager==0.10.0
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 wrapt==1.12.1
