@@ -2,5 +2,6 @@
 email = ""
 password = ""
 # Right click on Chrome driver -> Copy Path, paste below
-chromeDriverPath = '/Users/jonathan/Desktop/Folders/Code/Redbubble_Automation/chromedriver'
-directory = '/Users/jonathan/Desktop/Folders/Code/Redbubble_Automation/memes_folder'
+binaryPath = r"""C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"""
+chromeDriverPath = 'E:\Code\Redbubble_Uploader\chromedriver'
+directory = 'E:\Code\Redbubble_Uploader\memes'
