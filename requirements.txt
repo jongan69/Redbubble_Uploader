@@ -28,7 +28,7 @@ soupsieve==2.2.1
 SpeechRecognition==3.8.1
 toml==0.10.2
 tqdm==4.62.3
-urllib3<1.26
+urllib3==1.26.5
 webdrivermanager==0.10.0
 Werkzeug==2.2.3
 wrapt==1.12.1
