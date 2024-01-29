@@ -1,0 +1,5 @@
+# ignore config file
+config.py
+memes_folder/*
+*.mp3
+*.wav
